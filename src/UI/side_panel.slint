@@ -1,0 +1,24 @@
+import { Palette, VerticalBox } from "std-widgets.slint";
+import { SideButton } from "components/button.slint";
+export component SidePanel {
+    Rectangle{
+        background: Palette.background;
+        border-width: 2px;
+        border-color: Palette.border;
+        VerticalBox {
+            padding: 5px;
+            spacing: 3px;
+            SideButton {
+                height: 40px;
+                width: 100%;
+            }
+            SideButton {
+                height: 40px;
+                width: 100%;
+            }
+            Rectangle {}
+        }   
+    }
+
+    
+}

@@ -1,0 +1,35 @@
+import { Palette, VerticalBox, HorizontalBox } from "std-widgets.slint";
+import { TopPanel } from "top_panel.slint";
+import { SidePanel } from "side_panel.slint";
+import { TasksPanel } from "windows/tasks_window.slint";
+
+export component TaskManager inherits Window{
+    property <int> button-background;
+
+    background: Palette.background;
+    preferred-height: 600px;
+    min-height: 300px;
+    preferred-width: 1000px;
+    min-width: 500px;
+    title: "Rust Task Manager";
+    VerticalBox {
+        spacing: 0px;
+        padding: 0px;
+        TopPanel {
+            height: 50px;
+            width: 100%;
+        }
+        HorizontalBox {
+            spacing: 0px;
+            padding: 0px;
+            SidePanel {
+                height: 100%;
+                width: 200px;
+            }
+            TasksPanel {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
