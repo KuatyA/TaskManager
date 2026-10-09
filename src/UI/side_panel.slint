@@ -1,22 +1,52 @@
 import { Palette, VerticalBox } from "std-widgets.slint";
-import { SideButton } from "components/button.slint";
-export component SidePanel {
+import { SideButton } from "components/buttons.slint";
+export component SidePanel{
+
     Rectangle{
         background: Palette.background;
-        border-width: 2px;
+        border-width: 1px;
         border-color: Palette.border;
-        VerticalBox {
+        VerticalBox{
             padding: 5px;
             spacing: 3px;
-            SideButton {
+            SideButton{
                 height: 40px;
                 width: 100%;
+                clicked-value: 0;
+                label: "Tasks Panel";
+                icon: @image-url("components/icons/notes-panel.svg");
+            }
+            SideButton{
+                height: 40px;
+                width: 100%;
+                clicked-value: 1;
+                label: "System Panel";
             }
             SideButton {
                 height: 40px;
                 width: 100%;
+                clicked-value: 2;
+                label: "TBD";
             }
-            Rectangle {}
+            SideButton {
+                height: 40px;
+                width: 100%;
+                clicked-value: 3;
+                label: "TBD";
+            }
+            SideButton {
+                height: 40px;
+                width: 100%;
+                clicked-value: 4;
+                label: "TBD";
+            }
+            SideButton {
+                height: 40px;
+                width: 100%;
+                clicked-value: 5;
+                label: "Settings";
+            }
+            Rectangle{}
         }   
     }
 

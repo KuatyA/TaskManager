@@ -1,0 +1,18 @@
+//Logic of a UI code... wtf am i saying bro.
+export global Logic {
+    /*
+    *Each panel will have its own number.
+    * 0 - Tasks Panel
+    * 1 - System Info Panel
+    * 2 - TBD
+    * 3 - TBD
+    * 4 - TBD
+    * 5 - Settings
+    */
+    in-out property <int> open-panel;
+    callback change_panel(int);
+
+    change_panel(value) => {
+        open-panel = value;
+    }
+}
