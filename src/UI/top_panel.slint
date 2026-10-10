@@ -1,8 +1,25 @@
-import { Palette } from "std-widgets.slint";
+import { Palette, HorizontalBox } from "std-widgets.slint";
+import { TopButton } from "components/buttons.slint";
+
 export component TopPanel{
+    callback settings-opened();
     Rectangle{
         background: Palette.background;
         border-width: 1px;
         border-color: Palette.border;
+
+        
+
+        HorizontalBox{
+            padding: 5px;
+            spacing: 3px;
+            TopButton{
+                height: 100%;
+                width: self.height;
+                icon: @image-url("components/icons/settings.svg");
+                clicked-value: 5;
+            }
+            Rectangle {}
+        }
     }
 }

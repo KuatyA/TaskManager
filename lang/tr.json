@@ -1,0 +1,10 @@
+{
+    "side_panel": {
+        "task_panel": "Görev Paneli",
+        "system_panel": "Sistem Paneli",
+        "hardware_metrics": "Donanım Performansı",
+        "network_panel": "Bağlantı Paneli",
+        "disk_panel": "Diskler",
+        "settings":"Ayarlar"
+    }
+}

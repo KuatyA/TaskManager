@@ -1,10 +1,11 @@
 import { Palette, VerticalBox, HorizontalBox } from "std-widgets.slint";
 import { TopPanel } from "top_panel.slint";
 import { SidePanel } from "side_panel.slint";
-import { TasksPanel } from "windows/tasks_window.slint";
+import { TasksPanel } from "panels/tasks_panel.slint";
+
 
 export component TaskManager inherits Window{
-
+    callback settings-opened();
     background: Palette.background;
     preferred-height: 600px;
     min-height: 300px;

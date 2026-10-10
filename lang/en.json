@@ -1,0 +1,10 @@
+{
+    "side_panel": {
+        "task_panel": "Task Panel",
+        "system_panel": "System Panel",
+        "hardware_metrics": "Hardware Metrics",
+        "network_panel": "Network Panel",
+        "disk_panel": "Disks",
+        "settings":"Settings"
+    }
+}

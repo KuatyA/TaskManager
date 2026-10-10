@@ -1,5 +1,5 @@
 import "fonts/HurmitNerdFontMono-Regular.otf";
-import { Palette } from "std-widgets.slint";
+import { Palette, HorizontalBox } from "std-widgets.slint";
 import { Logic } from "../Logic/logic.slint";
 export component SideButton inherits Rectangle{
     in property <image> icon;
@@ -12,17 +12,44 @@ export component SideButton inherits Rectangle{
             Logic.change_panel(clicked-value);
        }
     }
-    Image {
+    HorizontalBox{
+        spacing: 8px;
+        padding: 10px;
+        alignment: center;
+        Image{
+            source: root.icon;
+            width: 16px;
+            height: 16px;
+        }
+        Text{
+            text: label;
+            font-size: 14px;
+            font-family: "Hurmit Nerd Font Mono";
+            horizontal-alignment: center;
+            vertical-alignment: center;
+        }
+    }
+    background: root.is-current-window ? Palette.selection-background : Palette.alternate-background;
+    border-width: 2px;
+    border-radius: 2px;
+}
+
+export component TopButton inherits Rectangle{
+    in property <image> icon;
+    in property <string> label;
+    in property <int> clicked-value;
+    property <bool> is-current-window: Logic.open-panel == root.clicked-value;
+
+    touch := TouchArea{
+        
+        clicked => {
+            Logic.change_panel(clicked-value);
+        }
+    }
+    Image{
         source: root.icon;
         width: 16px;
         height: 16px;
-        x: 26px;
-        y: 10px;
-    }
-    Text {
-        text: label;
-        font-size: 14px;
-        font-family: "Hurmit Nerd Font Mono";
     }
     background: root.is-current-window ? Palette.selection-background : Palette.alternate-background;
     border-width: 2px;
