@@ -1,7 +1,13 @@
-import { Palette, VerticalBox, HorizontalBox } from "std-widgets.slint";
+import { Palette, VerticalBox, HorizontalBox, Switch } from "std-widgets.slint";
 import { TopPanel } from "top_panel.slint";
 import { SidePanel } from "side_panel.slint";
 import { TasksPanel } from "panels/tasks_panel.slint";
+import { Logic } from "Logic/logic.slint";
+import { SystemInfoPanel } from "panels/system_info_panel.slint";
+import { SettingsPanel } from "panels/settings_panel.slint";
+import { HardwareMetrics } from "panels/hardware_metrics.slint";
+import { NetworkPanel } from "panels/network_panel.slint";
+import { Disks } from "panels/disks.slint";
 
 
 export component TaskManager inherits Window{
@@ -11,7 +17,8 @@ export component TaskManager inherits Window{
     min-height: 300px;
     preferred-width: 1000px;
     min-width: 500px;
-    title: "Rust Task Manager";
+    title: "C++ Task Manager";
+    
     VerticalBox{
         spacing: 0px;
         padding: 0px;
@@ -26,9 +33,25 @@ export component TaskManager inherits Window{
                 height: 100%;
                 width: 200px;
             }
-            TasksPanel{
-                width: 100%;
-                height: 100%;
+            Rectangle {
+                TasksPanel{
+                    visible: Logic.open-panel == 0;
+                }
+                SystemInfoPanel{
+                    visible: Logic.open-panel == 1;
+                }
+                HardwareMetrics{
+                    visible: Logic.open-panel == 2;
+                }
+                NetworkPanel{
+                    visible: Logic.open-panel == 3;
+                }
+                Disks{
+                    visible: Logic.open-panel == 4;
+                }
+                SettingsPanel{
+                    visible: Logic.open-panel == 5;
+                }
             }
         }
     }
