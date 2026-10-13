@@ -1,4 +1,6 @@
 //Logic of a UI code... wtf am i saying bro.
+import "../components/fonts/HurmitNerdFontMono-Regular.otf";
+
 export global Logic {
     /*
     *Each panel will have its own number.
@@ -12,7 +14,10 @@ export global Logic {
     in-out property <int> open-panel;
     callback change_panel(int);
 
+    out property <string> font: "Hurmit Nerd Font Mono";
+
     change_panel(value) => {
         open-panel = value;
     }
+
 }

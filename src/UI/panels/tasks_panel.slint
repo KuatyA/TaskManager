@@ -1,11 +1,105 @@
-import { Palette } from "std-widgets.slint";
+import { Palette, HorizontalBox, VerticalBox } from "std-widgets.slint";
+import { Logic } from "../Logic/logic.slint";
 export component TasksPanel{
-    Rectangle{
-        Text {
-            text: "tasks";
+        VerticalBox{
+            spacing: 0px;
+            padding: 0px;
+            Rectangle{
+                clip: true;
+                background: Palette.background;
+                border-width: 1px;
+                border-color: Palette.border;
+                height: 40px;
+                HorizontalBox{
+                    spacing: 0;
+                    padding: 0;
+                    Rectangle{
+                        height: 100%;
+                        width: 25%;
+                        border-width: 1px;
+                        border-color: Palette.border;
+                        clip: true;
+                        Text {
+                            text: "Process Name";
+                            font-family: Logic.font;
+                            font-size: 14px;
+                        }
+                    }
+                    Rectangle{
+                        height: 100%;
+                        width: 25%;
+                        border-width: 1px;
+                        border-color: Palette.border;
+                        clip: true;
+                        Text{
+                            text: "Process ID";
+                            font-family: Logic.font;
+                            font-size: 14px;
+                        }
+                    }
+                    Rectangle{
+                        height: 100%;
+                        width: 25%;
+                        border-width: 1px;
+                        border-color: Palette.border;
+                        clip: true;
+                        Text{
+                            text: "CPU Usage";
+                            font-family: Logic.font;
+                            font-size: 14px;
+                        }
+                    }
+                    Rectangle{
+                        height: 100%;
+                        width: 25%;
+                        border-width: 1px;
+                        border-color: Palette.border;
+                        clip: true;
+                        Text{
+                            text: "Memory Usage";
+                            font-family: Logic.font;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            
+            Rectangle{
+                background: Palette.background;
+                border-width: 1px;
+                border-color: Palette.border;
+                HorizontalBox{
+                    spacing: 0px;
+                    padding: 0px;
+                    Rectangle{
+                        height: 100%;
+                        width: 25%;
+                        border-width: 1px;
+                        border-color: Palette.border;
+                        clip: true;
+                    }
+                    Rectangle{
+                        height: 100%;
+                        width: 25%;
+                        border-width: 1px;
+                        border-color: Palette.border;
+                        clip: true;
+                    }
+                    Rectangle{
+                        height: 100%;
+                        width: 25%;
+                        border-width: 1px;
+                        border-color: Palette.border;
+                        clip: true;
+                    }
+                    Rectangle{
+                        height: 100%;
+                        width: 25%;
+                        border-width: 1px;
+                        border-color: Palette.border;
+                        clip: true;
+                    }
+                }
+            }
         }
-        background: Palette.background;
-        border-width: 1px;
-        border-color: Palette.border;
     }
-}

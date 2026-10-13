@@ -19,6 +19,7 @@ export component TaskManager inherits Window{
     min-width: 500px;
     title: "C++ Task Manager";
     
+    
     VerticalBox{
         spacing: 0px;
         padding: 0px;
@@ -36,21 +37,33 @@ export component TaskManager inherits Window{
             Rectangle {
                 TasksPanel{
                     visible: Logic.open-panel == 0;
+                    height: 100%;
+                    width: 100%;
                 }
                 SystemInfoPanel{
                     visible: Logic.open-panel == 1;
+                    height: 100%;
+                    width: 100%;
                 }
                 HardwareMetrics{
                     visible: Logic.open-panel == 2;
+                    height: 100%;
+                    width: 100%;
                 }
                 NetworkPanel{
                     visible: Logic.open-panel == 3;
+                    height: 100%;
+                    width: 100%;
                 }
                 Disks{
                     visible: Logic.open-panel == 4;
+                    height: 100%;
+                    width: 100%;
                 }
                 SettingsPanel{
                     visible: Logic.open-panel == 5;
+                    height: 100%;
+                    width: 100%;
                 }
             }
         }

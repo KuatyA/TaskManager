@@ -7,19 +7,31 @@ export component TopPanel{
         background: Palette.background;
         border-width: 1px;
         border-color: Palette.border;
-
-        
-
         HorizontalBox{
-            padding: 5px;
-            spacing: 3px;
-            TopButton{
+            padding: 0px;
+            spacing: 0px;
+            Rectangle {
                 height: 100%;
-                width: self.height;
-                icon: @image-url("components/icons/settings.svg");
-                clicked-value: 5;
+                width: 200px;
+                border-width: 1px;
+                border-color: Palette.border;
+                HorizontalBox {
+                    padding: 5px;
+                    spacing: 3px;
+                    width: 100%;
+                    height: 100%;
+                    TopButton{
+                        height: 40px;
+                        width: self.height;
+                        icon: @image-url("components/icons/settings.svg");
+                        clicked-value: 5;
+                    }
+                }
             }
-            Rectangle {}
+            Rectangle {
+                border-width: 1px;
+                border-color: Palette.border;
+            }
         }
     }
 }
