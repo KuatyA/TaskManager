@@ -1,11 +1,43 @@
-import { Palette } from "std-widgets.slint";
+import { Palette, VerticalBox, HorizontalBox } from "std-widgets.slint";
+
 export component SystemInfoPanel{
-    Rectangle{
-        Text {
-            text: "system";
+    VerticalBox{
+        HorizontalBox{
+            padding: 3px;
+            spacing: 3px;
+            Rectangle{
+                height: 100%;
+                border-width: 2px;
+                border-color: Palette.border;
+            }
+            Rectangle{
+                height: 100%;
+                border-width: 2px;
+                border-color: Palette.border;
+            }
         }
-        background: Palette.background;
-        border-width: 1px;
-        border-color: Palette.border;
+        HorizontalBox{
+            padding: 3px;
+            spacing: 3px;
+            Rectangle{
+                height: 100%;
+                border-width: 2px;
+                border-color: Palette.border;
+            }
+            Rectangle{
+                height: 100%;
+                border-width: 2px;
+                border-color: Palette.border;
+            }
+        }
+        HorizontalBox{
+            padding: 3px;
+            spacing: 3px;
+            Rectangle{
+                height: 100%;
+                border-width: 2px;
+                border-color: Palette.border;
+            }
+        }
     }
 }
