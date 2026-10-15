@@ -1,0 +1,18 @@
+{
+    "side_panel": {
+        "task_panel": "タスクパネル",
+        "system_panel": "システムパネル",
+        "hardware_metrics": "ハードウェアパフォーマンス",
+        "network_panel": "ネットワークパネル",
+        "disk_panel": "ディスク",
+        "settings": "設定"
+    },
+    "panels": {
+        "task_panel": {
+            "process_id": "プロセス ID",
+            "process_name": "プロセス名",
+            "cpu_usage": "CPU 使用率",
+            "memory_usage": "メモリ使用量"
+        }
+    }
+}

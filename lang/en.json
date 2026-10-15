@@ -6,5 +6,13 @@
         "network_panel": "Network Panel",
         "disk_panel": "Disks",
         "settings":"Settings"
+    },
+    "panels": {
+        "task_panel": {
+            "process_id": "Process ID",
+            "process_name": "Process Name",
+            "cpu_usage": "Cpu Usage",
+            "memory_usage": "Memory Usage"
+        }
     }
 }

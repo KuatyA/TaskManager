@@ -1,11 +1,33 @@
-import { Palette } from "std-widgets.slint";
+import { Palette, VerticalBox, HorizontalBox } from "std-widgets.slint";
 export component HardwareMetrics{
-    Rectangle{
-        Text {
-            text: "hardware";
+    VerticalBox{
+        spacing: 4px;
+        padding: 4px;
+        Rectangle{
+            width: 100%;
+            background: Palette.background;
+            border-width: 2px;
+            border-color: Palette.border;
         }
-        background: Palette.background;
-        border-width: 1px;
-        border-color: Palette.border;
+        HorizontalBox{
+            padding: 0px;
+            spacing: 4px;
+            Rectangle{
+                background: Palette.background;
+                border-width: 2px;
+                border-color: Palette.border;
+            }
+            Rectangle{
+                background: Palette.background;
+                border-width: 2px;
+                border-color: Palette.border;
+            }
+        }
+        Rectangle{
+            width: 100%;
+            background: Palette.background;
+            border-width: 2px;
+            border-color: Palette.border;
+        }
     }
 }

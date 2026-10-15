@@ -6,5 +6,13 @@
         "network_panel": "Bağlantı Paneli",
         "disk_panel": "Diskler",
         "settings":"Ayarlar"
+    },
+    "panels": {
+        "task_panel": {
+            "process_id": "Görev Numarası",
+            "process_name": "Görev İsmi",
+            "cpu_usage": "İşlemci Kullanımı",
+            "memory_usage": "Bellek Kullanımı"
+        }
     }
 }

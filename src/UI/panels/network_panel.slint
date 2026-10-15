@@ -1,11 +1,19 @@
-import { Palette } from "std-widgets.slint";
+import { Palette, VerticalBox } from "std-widgets.slint";
 export component NetworkPanel{
-    Rectangle{
-        Text {
-            text: "Network";
+    VerticalBox{
+        padding: 4px;
+        spacing: 4px;
+        Rectangle{
+            width: 100%;
+            background: Palette.background;
+            border-color: Palette.border;
+            border-width: 2px;
         }
-        background: Palette.background;
-        border-width: 1px;
-        border-color: Palette.border;
+        Rectangle{
+            width: 100%;
+            background: Palette.background;
+            border-color: Palette.border;
+            border-width: 2px;
+        }
     }
 }
